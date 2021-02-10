@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900");
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+  /* //transition-delay: 1000ms; */
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+  /* transition-delay: 1000ms; */
+}
+.my-node-done {
+  opacity: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*transition*/
+.transition_fade-enter {
+  opacity: 0.01;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.transition_fade-enter.transition_fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
 }
 
-.App-link {
-  color: #61dafb;
+.transition_fade-appear {
+  opacity: 0.01;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transition_fade-appear.transition_fade-appear-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.transition_fade-app {
+  opacity: 0.01;
+}
+
+.transition_fade-enter.transition_fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.transition_fade-exit {
+  opacity: 1;
+}
+
+.transition_fade-exit.transition_fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 200ms ease-in;
 }
